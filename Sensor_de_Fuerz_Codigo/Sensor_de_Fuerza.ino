@@ -2,7 +2,7 @@
 double v = 0.0;
 double v2 = 0.0;
 double F = 0.0;
-double Rs = 0.0;
+double Rf = 0.0;
 double w = 0.0; 
 
 
@@ -20,8 +20,8 @@ Serial.begin(9600);
 void loop() {
   v=(analogRead(A0));
   v2 = (v*5)/1023; 
-  Rs = 15*(5/v2 - 1);
-  F = pow(Rs/6.0075,-1/0.701);
+  Rf = 15*(5/v2 - 1);
+  F = pow(Rf/6.0075,-1/0.701);
   w = ((F/9.81)*1000);
   
   lcd.clear();
